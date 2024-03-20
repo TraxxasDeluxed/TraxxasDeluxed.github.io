@@ -3,6 +3,7 @@ body {
     background-image: url("../image/wallpaper.jpeg");
     background-size: contain;
     
+    
 }
 
 .icon-bar {
@@ -22,9 +23,13 @@ body {
 }
 
 .icon-bar a:hover {
-  background-color: #000;
+  background-color: grey;
 }
 
 .active {
   background-color: lightgreen;
+}
+
+.white{
+  color: white;
 }
