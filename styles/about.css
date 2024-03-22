@@ -1,0 +1,21 @@
+div{
+border-bottom: 4px dashed black;
+  height: 100px;
+  width: 100px;
+  font-weight: bold;
+  text-align: center;
+}
+h1{
+    text-emphasis-color: black;
+}
+body{
+    background-color: azure;
+}
+ul{
+    background-color: azure;
+    border: dashed black;
+    border: 5px;
+    padding: 10px;
+}
+.link { color: black; }
+.link:hover { color: #00FF00; }
