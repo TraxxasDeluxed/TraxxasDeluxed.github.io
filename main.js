@@ -17,14 +17,14 @@ class NavBar extends HTMLElement {
     // The browser calls this method when the element is
     // added to the DOM.
     connectedCallback() {
-        this.innerHTML = `<div id='navbar'>
+        this.id = "navbar";
+        this.innerHTML = `
         <ul>
             <li><a href="#">Logo</a></li>
             <li><a href="/about.html">About</a></li>
             <li><a href="/animations.html">Work</a></li>
             <li><a href="#">Contact</a></li>
-        </ul>
-        </div>`;
+        </ul>`;
     }
 }
 
