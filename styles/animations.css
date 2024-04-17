@@ -81,7 +81,7 @@
 .fading-gallery img:hover{
     opacity: 1;
     transform:translate(-5px,-5px) scale(1.5) ;
-    filter: drop-shadow(30px 10px 4px black);
+    filter: drop-shadow(15px 5px 2px black);
    
 
 }

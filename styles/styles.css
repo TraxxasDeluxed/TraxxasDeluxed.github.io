@@ -1,31 +1,59 @@
-body {
-    margin:0;
-   background-color: azure;
-    background-size: contain;
+*{
+  margin: 0;
+  padding: border-box;
+  font-family: "Poppins",sans-serif;
 }
 
-
-.icon-bar {
-  width: 100%;
-  background-color: #555;
-  bottom:0;
-  position:fixed;
+header{
+  position:relative;
+  left:0;
+  top:0;
+  width: 1005;
+  height: 80px;
 }
 
-.icon-bar a {
-  display: block;
-  text-align: center;
-  padding: 16px;
-  transition: all 0.3s ease;
-  color: white;
-  font-size: 36px;
+header h4{
+  position:absolute;
+  left:10%;
+  bottom: 1rem;
+  font-size: 1.6rem;
 }
 
-.icon-bar a:hover {
-  background-color: grey;
+/* Splash Screen*/
+
+.intro{
+  position: fixed;
+  z-index: 1;
+  left:0;
+  top:0;
+  width:100%;
+  height:100vh;
+  background-color: #161616;
+  transition:1s;
 }
 
-.active {
-  background-color: black;
+.logo-header{
+  position: absolute;
+  top:40%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  color: #ffffff;
 }
 
+.logo{
+  position: relative;
+  display:inline-block;
+  bottom: -20px;
+  opacity: 0;
+}
+
+.logo.active{
+  bottom: 0;
+  opacity: 1;
+  transition: ease-in-out 0.5s;
+}
+
+.logo.fade{
+  bottom:150px;
+  transition: ease-in-out 0.5s;
+}
