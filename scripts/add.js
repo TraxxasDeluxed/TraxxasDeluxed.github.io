@@ -21,9 +21,49 @@ for(let i=0;i<101;i++){
 }
 
 //Task 5
-
 let counter = 1
 for(i=1;i<11;i++){
     counter*=1
     console.log(counter)
 }
+
+// Task 6
+console.log("Task 6")
+let arr =[3,1,4,1,5];
+for(let i=0;i<arr.length;i++){
+  console.log(arr[i])
+}
+
+// Task 7
+console.log("Task 7")
+arr.reverse()
+for(let i=0;i<arr.length;i++){
+   console.log(arr[i])
+}
+
+// Task 8
+console.log("Task 8")
+arr1 = []
+for(let i=0;i<11;i++){
+  arr1.push(i*i*i)
+}
+console.log(arr1)
+
+//Task 9
+arr2=[1]
+const number = 10
+let n1 = 0, n2 = 1, nextTerm;
+for (let i = 1; i <= number; i++) {
+    console.log(n1);
+    nextTerm = n1 + n2;
+    n1 = n2;
+    n2 = nextTerm;
+    arr2.push(nextTerm)
+}
+console.log(arr2)
+
+// Task 10
+arr3=[...arr]
+console.log(arr3)
+
+
