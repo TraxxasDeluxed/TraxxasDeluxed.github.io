@@ -1,29 +1,34 @@
 // Task1
+console.log("Task 1")
 for(let i=0;i<11;i++){
     console.log(i*i)
 }
 
 //Task 2 
+console.log("Task 2")
 for(let i=5;i>0;i--){
     console.log(i);
 }
 console.log("Blastoff!")
 
 //Task 3
-for(let i=0;i<51;i+2){
+console.log("Task 3")
+for(let i=0;i<51;i+=2){
     console.log(i)
 }
 
 // Task 4 
+console.log("Task 4")
 let sum=0
 for(let i=0;i<101;i++){
     console.log(sum+i)
 }
 
 //Task 5
+console.log("Task 5")
 let counter = 1
 for(i=1;i<11;i++){
-    counter*=1
+    counter*=i
     console.log(counter)
 }
 
@@ -36,9 +41,8 @@ for(let i=0;i<arr.length;i++){
 
 // Task 7
 console.log("Task 7")
-arr.reverse()
-for(let i=0;i<arr.length;i++){
-   console.log(arr[i])
+for(let i=-1;i >= -(arr.length);i--){
+    console.log(arr.at(i))
 }
 
 // Task 8
@@ -50,11 +54,10 @@ for(let i=0;i<11;i++){
 console.log(arr1)
 
 //Task 9
+console.log("Task 9")
 arr2=[1]
-const number = 10
 let n1 = 0, n2 = 1, nextTerm;
-for (let i = 1; i <= number; i++) {
-    console.log(n1);
+for (let i = 1; i < 11; i++) {
     nextTerm = n1 + n2;
     n1 = n2;
     n2 = nextTerm;
@@ -62,7 +65,9 @@ for (let i = 1; i <= number; i++) {
 }
 console.log(arr2)
 
+
 // Task 10
+arr.reverse()
 arr3=[...arr]
 console.log(arr3)
 
