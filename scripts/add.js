@@ -47,7 +47,7 @@ for(let i=-1;i >= -(arr.length);i--){
 
 // Task 8
 console.log("Task 8")
-arr1 = []
+let arr1 = []
 for(let i=0;i<11;i++){
   arr1.push(i*i*i)
 }
@@ -55,7 +55,7 @@ console.log(arr1)
 
 //Task 9
 console.log("Task 9")
-arr2=[1]
+let arr2=[1]
 let n1 = 0, n2 = 1, nextTerm;
 for (let i = 1; i < 11; i++) {
     nextTerm = n1 + n2;
@@ -68,8 +68,10 @@ console.log(arr2)
 
 // Task 10
 console.log("Task 10")
-arr.reverse()
-arr3=[...arr]
-console.log(arr3)
 
+let arr3 = [];
 
+for(let i=-1;i >= -(arr.length);i--) {
+    console.log(arr.at(i));
+    arr3.push(arr.at(i));
+}
