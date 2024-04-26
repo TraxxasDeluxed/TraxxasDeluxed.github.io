@@ -67,6 +67,7 @@ console.log(arr2)
 
 
 // Task 10
+console.log("Task 10")
 arr.reverse()
 arr3=[...arr]
 console.log(arr3)
