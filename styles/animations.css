@@ -91,7 +91,7 @@ input:checked + label .description {
 }
 
 .card[for="c1"] {
-    background-image: url('image/snake.jpg');
+    background-image: url('./snake.jpg');
 }
 .card[for="c2"] {
     background-image: url('image/tiger.jpg');
@@ -100,5 +100,5 @@ input:checked + label .description {
     background-image: url('image/flower.jpg');
 }
 .card[for="c4"] {
-    background-image: url('image/bridge.jpg');
+    background-image: url('image/bridge.jpeg');
 }
