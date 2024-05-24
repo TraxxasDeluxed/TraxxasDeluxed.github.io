@@ -13,7 +13,7 @@ class NavBar extends HTMLElement {
         }*/
         this.innerHTML = `
         <ul>
-            <li><a href="/index.html">Logo</a></li>
+            <li><a href="/index2.html">Logo</a></li>
             <li><a href="/about.html">About</a></li>
             <li><a href="/animations.html">Work</a></li>
             <li><a href="/contactUs.html">Contact</a></li>
