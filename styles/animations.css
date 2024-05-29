@@ -18,10 +18,12 @@ body {
 }
 
 .container {
-    height: 500px;
+    height: 55vh;
+    width: 100vw;
     display: flex;
     flex-wrap: nowrap;
     justify-content: start;
+    justify-content: center;
 }
 
 .card {
@@ -42,6 +44,7 @@ body {
     color: white;
     display: flex;
     flex-wrap: nowrap;
+    
 }
 
 .card > .row > .icon {
