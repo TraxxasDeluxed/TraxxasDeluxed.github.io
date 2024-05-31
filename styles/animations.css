@@ -18,12 +18,10 @@ body {
 }
 
 .container {
-    height: 55vh;
-    width: 100vw;
+    height: 400px;
     display: flex;
     flex-wrap: nowrap;
     justify-content: start;
-    justify-content: center;
 }
 
 .card {
@@ -37,14 +35,13 @@ body {
     display: flex;
     align-items: flex-end;
     transition: .6s cubic-bezier(.28,-0.03,0,.99);
-    box-shadow: 0px 10px 30px -5px rgb(255,64,129);
+    box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
 }
 
 .card > .row {
     color: white;
     display: flex;
     flex-wrap: nowrap;
-    
 }
 
 .card > .row > .icon {
@@ -85,7 +82,7 @@ input {
 }
 
 input:checked + label {
-    width: 900px;
+    width: 600px;
 }
 
 input:checked + label .description {
@@ -104,4 +101,42 @@ input:checked + label .description {
 }
 .card[for="c4"] {
     background-image: url('../image/bridge.jpeg');
+}
+
+/* Add styles for info container */
+.info-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px; /* To Adjust width as needed */
+    max-width: 90%; /* To Adjust maximum width as needed */
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #223; /* Match the background color of the cards */
+    color: black;
+    box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+    /* display: none; */
+}
+
+/* Add styles for info content */
+.info-content {
+    color: black;
+}
+
+#info-c1 {
+    color:white
+}
+
+.info-container > * {
+    display: none;
+}
+
+
+/* Show info content when respective card is checked */
+#c1:checked ~ .info-container #info-c1,
+#c2:checked ~ .info-container #info-c2,
+#c3:checked ~ .info-container #info-c3,
+#c4:checked ~ .info-container #info-c4 {
+    display: block;
 }
