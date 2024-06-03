@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #eeeeea ;
+    background-color: #e0e0d6; /* Adjusted color */
 }
 
 .wrapper {
@@ -15,27 +15,31 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative; /* To position info boxes */
+    padding: 2vh; /* Add padding to create space for info boxes */
 }
 
 .container {
-    height: 400px;
+    height: 50vh; /* Increased height by 25% */
     display: flex;
     flex-wrap: nowrap;
-    justify-content: start;
+    justify-content: start; /* Original alignment */
+    align-items: center; /* Vertically center the cards */
 }
 
 .card {
-    width: 80px;
+    width: 6.5vw; /* Decreased width by 4% */
+    height: 50vh; /* Adjusted to new height */
     border-radius: .75rem;
     background-size: cover;
     cursor: pointer;
     overflow: hidden;
     border-radius: 2rem;
-    margin: 0 10px;
+    margin: 0 0.5vw;
     display: flex;
     align-items: flex-end;
     transition: .6s cubic-bezier(.28,-0.03,0,.99);
-    box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+    box-shadow: 0px 1vh 3vh -0.5vh rgba(0,0,0,0.8);
 }
 
 .card > .row {
@@ -48,11 +52,12 @@ body {
     background: #223;
     color: white;
     border-radius: 50%;
-    width: 50px;
+    width: 4vw; /* Adjusted size */
+    height: 4vw; /* Adjusted size */
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 15px;
+    margin: 1vw; /* Adjusted margin */
 }
 
 .card > .row > .description {
@@ -60,17 +65,17 @@ body {
     justify-content: center;
     flex-direction: column;
     overflow: hidden;
-    height: 80px;
-    width: 520px;
+    height: 6vh; /* Adjusted height */
+    width: 52vw; /* Adjusted width */
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(2vh); /* Adjusted transform */
     transition-delay: .3s;
     transition: all .3s ease;
 }
 
 .description p {
     color: #b0b0ba;
-    padding-top: 5px;
+    padding-top: 0.5vh; /* Adjusted padding */
 }
 
 .description h4 {
@@ -82,7 +87,8 @@ input {
 }
 
 input:checked + label {
-    width: 600px;
+    width: 41vw; /* Decreased width by 4% */
+    height: 50vh; /* Ensures the card stays the same height */
 }
 
 input:checked + label .description {
@@ -103,40 +109,69 @@ input:checked + label .description {
     background-image: url('../image/bridge.jpeg');
 }
 
-/* Add styles for info container */
+/* Add styles for info containers */
 .info-container {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 600px; /* To Adjust width as needed */
-    max-width: 90%; /* To Adjust maximum width as needed */
-    padding: 20px;
-    border-radius: 10px;
+    padding: 2vh; /* Adjusted padding for better spacing */
+    border-radius: 1vh; /* Adjusted border radius */
     background-color: #223; /* Match the background color of the cards */
-    color: black;
-    box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
-    /* display: none; */
+    color: white;
+    box-shadow: 0px 1vh 3vh -0.5vh rgba(0,0,0,0.8);
+    display: none; /* Hide initially */
 }
 
-/* Add styles for info content */
-.info-content {
-    color: black;
+.info-container.large {
+    width: 50vw; /* Adjust width as needed */
+    max-width: 80vw; /* Adjust maximum width as needed */
 }
 
-#info-c1 {
-    color:white
+.info-container.small {
+    width: 15vw;
+    height: 10vh; /* Adjusted height */
 }
 
-.info-container > * {
-    display: none;
+.info-container.side {
+    width: 15vw; /* Increased width by 25% */
+    height: 35.2vh; /* Increased height by 10% */
+    font-size: 1.5vh; /* Adjust font size */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5vh 0;
 }
 
+/* Positioning info containers */
+.info-container#info-c1 {
+    top: 2vh;
+    left: 2vw;
+}
+.info-container#info-c2 {
+    bottom: 2vh;
+    right: 2vw;
+}
+.info-container#info-c3 {
+    top: 10vh;
+    right: 2vw;
+}
+.info-container#info-c4 {
+    bottom: 10vh;
+    left: 2vw;
+}
+.info-container#info-left {
+    top: 50%;
+    left: 1vw;
+    transform: translateY(-50%);
+}
+.info-container#info-right {
+    top: 50%;
+    right: 1vw;
+    transform: translateY(-50%);
+}
 
 /* Show info content when respective card is checked */
-#c1:checked ~ .info-container #info-c1,
-#c2:checked ~ .info-container #info-c2,
-#c3:checked ~ .info-container #info-c3,
-#c4:checked ~ .info-container #info-c4 {
+#c1:checked ~ .info-container,
+#c2:checked ~ .info-container,
+#c3:checked ~ .info-container,
+#c4:checked ~ .info-container {
     display: block;
 }

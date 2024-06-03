@@ -5,16 +5,16 @@
 body {
     font-family: Lato, sans-serif;
     margin: 0;
-    background-color: #191919;
-   
+    background-color: #191919; 
 }
 
 #navbar {
     width: 100vw;
-    background-color: #192024;
+    background-color: black; /* Ensures the navbar background is always black */
     font-weight: bold;
     position: sticky;
-    top:0px;
+    top: 0px;
+    z-index: 1000; /* Ensures the navbar is always on top */
 }
 
 #navbar ul {
