@@ -1,18 +1,63 @@
-const div = document.querySelector(".text");
-const text = "This is how you create a text typing effect with Javascript"
+const texts = {
+   "c1": ["Hello", "Hello", "Hello", "Hello", "Hello", "Hello"],
+   "c2": ["Bello", "Bello", "Bello", "Bello", "Bello", "Bello"],
+   "c3": ["Cello", "Cello", "Cello", "Cello", "Cello", "Cello"],
+   "c4": ["Dello", "Dello", "Dello", "Dello", "Dello", "Dello"]
+};
 
-function textTypingEffect(element, text, i = 0 ){
-   if(i == 0){
-    element.textContent = "";
+function textTypingEffect(element, text, i = 0) {
+   if (i == 0) {
+       element.textContent = "";
    }
    element.textContent += text[i];
 
-   //If we reached the end of the string
-   if (i === text.length - 1){
-        return;
+   if (i === text.length - 1) {
+       return;
    }
 
-   setTimeout(() => textTypingEffect(element, text, i + 1 ), 50);
+   setTimeout(() => textTypingEffect(element, text, i + 1), 50);
 }
 
-textTypingEffect(div,text)
+function applyTextTypingEffect(elements, texts) {
+   elements.forEach((element, index) => {
+       if (element) {
+           textTypingEffect(element, texts[index]);
+       }
+   });
+}
+
+document.querySelectorAll('input[name="slide"]').forEach(radio => {
+   radio.addEventListener('change', (event) => {
+       const selectedId = event.target.id;
+       const textSet = texts[selectedId];
+
+       const elements = [
+           document.querySelector("#info-c1 h1"),
+           document.querySelector("#info-c2 h1"),
+           document.querySelector("#info-c3 h1"),
+           document.querySelector("#info-c4 h1"),
+           document.querySelector("#info-left h1"),
+           document.querySelector("#info-right h1")
+       ];
+
+       applyTextTypingEffect(elements, textSet);
+   });
+});
+
+// Initial trigger for the default checked radio button
+const initialSelectedRadio = document.querySelector('input[name="slide"]:checked');
+if (initialSelectedRadio) {
+   const initialSelectedId = initialSelectedRadio.id;
+   const initialTextSet = texts[initialSelectedId];
+
+   const elements = [
+       document.querySelector("#info-c1 h1"),
+       document.querySelector("#info-c2 h1"),
+       document.querySelector("#info-c3 h1"),
+       document.querySelector("#info-c4 h1"),
+       document.querySelector("#info-left h1"),
+       document.querySelector("#info-right h1")
+   ];
+
+   applyTextTypingEffect(elements, initialTextSet);
+}
