@@ -1,59 +1,61 @@
-*{
+/* Global Styles */
+* {
   margin: 0;
   padding: border-box;
-  font-family: "Poppins",sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
-header{
-  position:relative;
-  left:0;
-  top:0;
-  width: 1005;
+/* Header Styles */
+header {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
   height: 80px;
+  z-index: 1; /* Ensure the navbar has a lower z-index */
 }
 
-header h4{
-  position:absolute;
-  left:10%;
+header h4 {
+  position: absolute;
+  left: 10%;
   bottom: 1rem;
   font-size: 1.6rem;
 }
 
-/* Splash Screen*/
-
-.intro{
+/* Splash Screen */
+.intro {
   position: fixed;
-  z-index: 1;
-  left:0;
-  top:0;
-  width:100%;
-  height:100vh;
+  z-index: 100; /* Ensure the splash screen is on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
   background-color: #161616;
-  transition:1s;
+  transition: 1s;
 }
 
-.logo-header{
+.logo-header {
   position: absolute;
-  top:40%;
-  left:50%;
-  transform: translate(-50%,-50%);
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: #ffffff;
 }
 
-.logo{
+.logo {
   position: relative;
-  display:inline-block;
+  display: inline-block;
   bottom: -20px;
   opacity: 0;
 }
 
-.logo.active{
+.logo.active {
   bottom: 0;
   opacity: 1;
   transition: ease-in-out 0.5s;
 }
 
-.logo.fade{
-  bottom:150px;
+.logo.fade {
+  bottom: 150px;
   transition: ease-in-out 0.5s;
 }

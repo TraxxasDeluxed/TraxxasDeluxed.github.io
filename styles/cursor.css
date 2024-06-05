@@ -15,7 +15,7 @@ body {
     transition-timing-function: ease-out;
     animation: cursorAnim .5s infinite alternate;
     pointer-events: none;
-    z-index: 1;
+    z-index: 2;
 }
 
 .cursor::after {

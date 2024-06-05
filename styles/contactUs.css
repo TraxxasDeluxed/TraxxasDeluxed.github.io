@@ -12,32 +12,92 @@ body {
 
 .contact-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    align-items: flex-start;
     justify-content: center;
     width: 100vw;
     padding: 2vh 0;
+    gap: 2vw; /* Adjust the space between the maps and the form */
 }
 
-.maps {
-    width: 90vw;
-    max-width: 60vw; /* Adjust the maximum width as needed */
-    margin-bottom: 2vh;
-}
-
-.maps iframe {
-    width: 100%;
-    height: 40vh; /* Adjust the height as needed */
-    border: none;
-}
-
+.maps,
 .googleform-container {
-    width: 90vw;
-    max-width: 60vw; /* Adjust the maximum width as needed */
+    width: 45vw;
+    max-width: 45vw; /* Adjust the maximum width as needed */
+    height: 88vh; /* Set the height to be the same for both */
+    border-radius: 10px; /* Add border radius */
+    overflow: hidden; /* Ensure border radius is applied */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a slight shadow for better visibility */
+    position: relative; /* Required for pseudo-elements positioning */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.maps::before,
+.maps::after,
+.maps::nth-child(2)::before,
+.maps::nth-child(2)::after {
+    content: "";
+    position: absolute;
+    background-color: black;
+    z-index: 1;
+}
+
+.maps::before {
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    transition: width 0.5s ease;
+}
+
+.maps::after {
+    bottom: 0;
+    right: 0;
+    width: 2px;
+    height: 0;
+    transition: height 0.5s ease 0.5s; /* Delay to match the before element */
+}
+
+.maps:hover::before {
+    width: 100%;
+}
+
+.maps:hover::after {
+    height: 100%;
+}
+
+.maps:hover {
+    transform: scale(1.01);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.maps::nth-child(2)::before {
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    transition: width 0.5s ease;
+}
+
+.maps::nth-child(2)::after {
+    bottom: 0;
+    left: 0;
+    width: 2px;
+    height: 0;
+    transition: height 0.5s ease 0.5s; /* Delay to match the before element */
+}
+
+.maps:hover::nth-child(2)::before {
+    width: 100%;
+}
+
+.maps:hover::nth-child(2)::after {
+    height: 100%;
+}
+
+.maps iframe,
 .googleform {
     width: 100%;
-    height: 80vh; /* Adjust the height as needed */
+    height: 100%; /* Match the height of the containers */
     border: none;
 }

@@ -4,11 +4,16 @@
     font-family: 'Josefin Sans', sans-serif;
     box-sizing: border-box;
 }
+body{
+   background-color: #eaeaea !important; 
+}
+
+
 
 .about {
     width: 100%;
     padding: 10vh 0; /* Adjusted to viewport height */
-    background-color: #191919;
+    
 }
 
 .about img {
@@ -36,7 +41,7 @@
 }
 
 .about-text h1 {
-    color: white;
+    color: black;
     font-size: 6vw; /* Adjusted to viewport width */
     text-transform: capitalize;
     margin-bottom: 2vh; /* Adjusted to viewport height */
@@ -59,7 +64,7 @@
 }
 
 .about-text h5 {
-    color: white;
+    color: black;
     font-size: 2vw; /* Adjusted to viewport width */
     text-transform: capitalize;
     margin-bottom: 2vh; /* Adjusted to viewport height */
@@ -67,11 +72,11 @@
 }
 
 span {
-    color: #f9004d;
+    color: black;
 }
 
 .about-text p {
-    color: white;
+    color: black;
     letter-spacing: 0.1vw; /* Adjusted to viewport width */
     line-height: 2.8vh; /* Adjusted to viewport height */
     font-size: 1.5vw; /* Adjusted to viewport width */
@@ -93,4 +98,5 @@ button:hover {
     background: transparent;
     border: 0.2vw solid #f9004d; /* Adjusted to viewport width */
     cursor: pointer;
+    background-color:black;
 }
