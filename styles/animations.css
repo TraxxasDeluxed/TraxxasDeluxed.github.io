@@ -176,3 +176,17 @@ input:checked + label .description {
     display: block;
 }
 
+span.headerh1{
+    display: none;/* Placeholder */
+
+}
+span.headerh4{
+    display: none; /* Placeholder */
+}
+
+span.text{
+    display: none; /* Placeholder */
+}
+
+
+
