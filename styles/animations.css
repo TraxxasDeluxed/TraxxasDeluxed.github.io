@@ -73,13 +73,15 @@ body {
     transition: all .3s ease;
 }
 
-.description p {
+.description .p {
     color: #b0b0ba;
     padding-top: 0.5vh; /* Adjusted padding */
 }
 
-.description h4 {
+.description .headerh4 {
     text-transform: uppercase;
+    color: white; /* Ensure text is visible */
+    font-weight: bold; /* Added font weight */
 }
 
 input {
@@ -169,24 +171,28 @@ input:checked + label .description {
 }
 
 /* Show info content when respective card is checked */
-#c1:checked ~ .info-container,
-#c2:checked ~ .info-container,
-#c3:checked ~ .info-container,
-#c4:checked ~ .info-container {
+#c1:checked ~ #info-c1,
+#c2:checked ~ #info-c2,
+#c3:checked ~ #info-c3,
+#c4:checked ~ #info-c4 {
     display: block;
 }
 
-span.headerh1{
-    display: none;/* Placeholder */
-
-}
-span.headerh4{
-    display: none; /* Placeholder */
-}
-
-span.text{
-    display: none; /* Placeholder */
+span.h1 {
+    display: block;
+    font-weight: bold;
+    font-size: 2em;
+    margin: 0.67em 0;
 }
 
+span.headerh4 {
+    display: block;
+    font-weight: bold;
+    font-size: 1em;
+    
+}
 
-
+span.p {
+    display: block;
+  
+}
