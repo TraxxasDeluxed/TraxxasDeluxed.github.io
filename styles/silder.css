@@ -142,3 +142,15 @@ body {
     background: #ababab;
     color: #fff;
 }
+
+.favicon-container {
+    width: 32px; /* Adjust size as needed */
+    height: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-block;
+}
+.favicon-container img {
+    width: 100%;
+    height: 100%;
+}
