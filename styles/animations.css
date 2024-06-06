@@ -68,7 +68,7 @@ body {
     height: 6vh; /* Adjusted height */
     width: 52vw; /* Adjusted width */
     opacity: 0;
-    transform: translateY(2vh); /* Adjusted transform */
+    transform: translateY(-1vh); /* Adjusted transform */
     transition-delay: .3s;
     transition: all .3s ease;
 }
@@ -134,15 +134,15 @@ input:checked + label .description {
 
 /* Positioning info containers */
 .info-container#info-c1 {
-    top: 11.5vh; /* Moved 2vh up */
+    top: 7.5vh; /* Moved 2vh up */
     left: 0.5vw;
 }
 .info-container#info-c2 {
-    bottom: 1vh; /* Moved 2vh up */
+    bottom: 2vh; /* Moved 2vh up */
     right: 0.5vw;
 }
 .info-container#info-c3 {
-    top: 16vh; /* Moved 2vh up */
+    top: 14vh; /* Moved 2vh up */
     right: 0.5vw;
 }
 .info-container#info-c4 {
