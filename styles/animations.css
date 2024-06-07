@@ -5,39 +5,53 @@
 }
 
 body {
-    background-color: #e0e0d6; /* Set background color */
+    background-color: #e0e0d6;
+    /* Set background color */
 }
 
 .wrapper {
     width: 100%;
-    height: 96vh; /* Adjust height */
+    height: 96vh;
+    /* Adjust height */
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative; /* Position info boxes */
-    padding: 2vh; /* Space around content */
+    position: relative;
+    /* Position info boxes */
+    padding: 2vh;
+    /* Space around content */
 }
 
 .container {
-    height: 50vh; /* Increase height */
+    height: 50vh;
+    /* Increase height */
     display: flex;
     flex-wrap: nowrap;
-    justify-content: start; /* Original alignment */
-    align-items: center; /* Center cards vertically */
+    justify-content: start;
+    /* Original alignment */
+    align-items: center;
+    /* Center cards vertically */
 }
 
 .card {
-    width: 6.5vw; /* Set width */
-    height: 50vh; /* Set height */
-    border-radius: 2rem; /* Rounded corners */
+    width: 6.5vw;
+    /* Set width */
+    height: 50vh;
+    /* Set height */
+    border-radius: 2rem;
+    /* Rounded corners */
     background-size: cover;
     cursor: pointer;
     overflow: hidden;
-    margin: 0 0.5vw; /* Horizontal margin */
+    margin: 0 0.5vw;
+    /* Horizontal margin */
     display: flex;
-    align-items: flex-end; /* Align content to bottom */
-    transition: .6s cubic-bezier(.28, -0.03, 0, .99); /* Smooth transition */
-    box-shadow: 0px 1vh 3vh -0.5vh rgba(0, 0, 0, 0.8); /* Shadow effect */
+    align-items: flex-end;
+    /* Align content to bottom */
+    transition: .6s cubic-bezier(.28, -0.03, 0, .99);
+    /* Smooth transition */
+    box-shadow: 0px 1vh 3vh -0.5vh rgba(0, 0, 0, 0.8);
+    /* Shadow effect */
 }
 
 .card>.row {
@@ -47,15 +61,19 @@ body {
 }
 
 .card>.row>.icon {
-    background: #223; /* Icon background */
+    background: #223;
+    /* Icon background */
     color: white;
-    border-radius: 50%; /* Circular icon */
+    border-radius: 50%;
+    /* Circular icon */
     width: 4vw;
-    height: 4vw; /* Set size */
+    height: 4vw;
+    /* Set size */
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 1vw; /* Margin around icon */
+    margin: 1vw;
+    /* Margin around icon */
 }
 
 .card>.row>.description {
@@ -63,37 +81,49 @@ body {
     justify-content: center;
     flex-direction: column;
     overflow: hidden;
-    height: 6vh; /* Set height */
-    width: 52vw; /* Set width */
-    opacity: 0; /* Initially hidden */
-    transform: translateY(-1vh); /* Initial position */
+    height: 6vh;
+    /* Set height */
+    width: 52vw;
+    /* Set width */
+    opacity: 0;
+    /* Initially hidden */
+    transform: translateY(-1vh);
+    /* Initial position */
     transition-delay: .3s;
-    transition: all .3s ease; /* Smooth transition */
+    transition: all .3s ease;
+    /* Smooth transition */
 }
 
 .description .p {
     color: #b0b0ba;
-    padding-top: 0.5vh; /* Padding */
+    padding-top: 0.5vh;
+    /* Padding */
 }
 
 .description .headerh4 {
     text-transform: uppercase;
-    color: white; /* Ensure text is visible */
-    font-weight: bold; /* Bold text */
+    color: white;
+    /* Ensure text is visible */
+    font-weight: bold;
+    /* Bold text */
 }
 
 input {
-    display: none; /* Hide input */
+    display: none;
+    /* Hide input */
 }
 
 input:checked+label {
-    width: 41vw; /* Adjust width */
-    height: 50vh; /* Ensure same height */
+    width: 41vw;
+    /* Adjust width */
+    height: 50vh;
+    /* Ensure same height */
 }
 
 input:checked+label .description {
     opacity: 1 !important;
-    transform: translateY(0) !important; /* Reveal description */
+    transform: translateY(0) !important;
+    /* Reveal description */
 }
 
 .card[for="c1"] {
@@ -114,22 +144,29 @@ input:checked+label .description {
 
 .info-container {
     position: absolute;
-    padding: 2vh; /* Padding for spacing */
-    border-radius: 1vh; /* Rounded corners */
-    background-color: #223; /* Match card background */
+    padding: 2vh;
+    /* Padding for spacing */
+    border-radius: 1vh;
+    /* Rounded corners */
+    background-color: #223;
+    /* Match card background */
     color: white;
     box-shadow: 0px 1vh 3vh -0.5vh rgba(0, 0, 0, 0.8);
-    display: flex; /* Flex container */
+    display: flex;
+    /* Flex container */
 }
 
 .info-container.large {
-    width: 50vw; /* Set width */
-    height: 8.5vh; /* Set height */
+    width: 50vw;
+    /* Set width */
+    height: 8.5vh;
+    /* Set height */
 }
 
 .info-container.small {
     width: 30vw;
-    height: 10vh; /* Set height */
+    height: 10vh;
+    /* Set height */
 }
 
 .info-container#info-c1 {
@@ -181,7 +218,8 @@ input:checked+label .description {
 #c4:checked~#info-c4,
 #c4:checked~#info-left,
 #c4:checked~#info-right {
-    display: block; /* Display info */
+    display: block;
+    /* Display info */
 }
 
 span.headerh1 {
