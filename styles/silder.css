@@ -1,13 +1,10 @@
 * {
-    margin: 0;
     padding: 0;
     box-sizing: border-box;
     /* Ensure padding and border are included in element's total width and height */
 }
 
 body {
-    background: #eaeaea;
-    /* Light grey background color */
     overflow: hidden;
     /* Hide overflow */
 }
@@ -35,8 +32,6 @@ body {
     /* Set height */
     position: absolute;
     top: 50%;
-    left: 30vw;
-    /* Initial left position */
     transform: translate(0, -50%);
     /* Vertically center */
     border-radius: 2vw;

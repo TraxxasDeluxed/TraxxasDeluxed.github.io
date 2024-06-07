@@ -3,18 +3,15 @@
 }
 
 body {
-    font-family: "Poppins", sans-serif !important; /* Set font family */
     font-weight: normal !important;
     margin: 0;
-    background-color: #191919; /* Dark background */
-    color: white;
 }
 
 #navbar {
     position: sticky; /* Stick to top */
     top: 0;
     width: 100%;
-    z-index: 500; /* Lower z-index to stay behind the cursor */
+    z-index: 50; /* Lower z-index to stay behind the cursor */
     background-color: black;
     font-weight: bold; /* Bold text */
     color: white;
