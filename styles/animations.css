@@ -6,158 +6,163 @@
 }
 
 body {
-    background-color: #e0e0d6; /* Adjusted color */
+    background-color: #e0e0d6; /* Set background color */
 }
 
 .wrapper {
     width: 100%;
-    height: 96vh; /* Adjusted height to move everything up by 2vh */
+    height: 96vh; /* Adjust height */
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative; /* To position info boxes */
-    padding: 2vh; /* Add padding to create space for info boxes */
+    position: relative; /* Position info boxes */
+    padding: 2vh; /* Space around content */
 }
 
 .container {
-    height: 50vh; /* Increased height by 25% */
+    height: 50vh; /* Increase height */
     display: flex;
     flex-wrap: nowrap;
     justify-content: start; /* Original alignment */
-    align-items: center; /* Vertically center the cards */
+    align-items: center; /* Center cards vertically */
 }
 
 .card {
-    width: 6.5vw; /* Decreased width by 4% */
-    height: 50vh; /* Adjusted to new height */
-    border-radius: .75rem;
+    width: 6.5vw; /* Set width */
+    height: 50vh; /* Set height */
+    border-radius: 2rem; /* Rounded corners */
     background-size: cover;
     cursor: pointer;
     overflow: hidden;
-    border-radius: 2rem;
-    margin: 0 0.5vw;
+    margin: 0 0.5vw; /* Horizontal margin */
     display: flex;
-    align-items: flex-end;
-    transition: .6s cubic-bezier(.28,-0.03,0,.99);
-    box-shadow: 0px 1vh 3vh -0.5vh rgba(0,0,0,0.8);
+    align-items: flex-end; /* Align content to bottom */
+    transition: .6s cubic-bezier(.28, -0.03, 0, .99); /* Smooth transition */
+    box-shadow: 0px 1vh 3vh -0.5vh rgba(0, 0, 0, 0.8); /* Shadow effect */
 }
 
-.card > .row {
+.card>.row {
     color: white;
     display: flex;
     flex-wrap: nowrap;
 }
 
-.card > .row > .icon {
-    background: #223;
+.card>.row>.icon {
+    background: #223; /* Icon background */
     color: white;
-    border-radius: 50%;
-    width: 4vw; /* Adjusted size */
-    height: 4vw; /* Adjusted size */
+    border-radius: 50%; /* Circular icon */
+    width: 4vw;
+    height: 4vw; /* Set size */
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 1vw; /* Adjusted margin */
+    margin: 1vw; /* Margin around icon */
 }
 
-.card > .row > .description {
+.card>.row>.description {
     display: flex;
     justify-content: center;
     flex-direction: column;
     overflow: hidden;
-    height: 6vh; /* Adjusted height */
-    width: 52vw; /* Adjusted width */
-    opacity: 0;
-    transform: translateY(-1vh); /* Adjusted transform */
+    height: 6vh; /* Set height */
+    width: 52vw; /* Set width */
+    opacity: 0; /* Initially hidden */
+    transform: translateY(-1vh); /* Initial position */
     transition-delay: .3s;
-    transition: all .3s ease;
+    transition: all .3s ease; /* Smooth transition */
 }
 
 .description .p {
     color: #b0b0ba;
-    padding-top: 0.5vh; /* Adjusted padding */
+    padding-top: 0.5vh; /* Padding */
 }
 
 .description .headerh4 {
     text-transform: uppercase;
     color: white; /* Ensure text is visible */
-    font-weight: bold; /* Added font weight */
+    font-weight: bold; /* Bold text */
 }
 
 input {
-    display: none;
+    display: none; /* Hide input */
 }
 
-input:checked + label {
-    width: 41vw; /* Decreased width by 4% */
-    height: 50vh; /* Ensures the card stays the same height */
+input:checked+label {
+    width: 41vw; /* Adjust width */
+    height: 50vh; /* Ensure same height */
 }
 
-input:checked + label .description {
+input:checked+label .description {
     opacity: 1 !important;
-    transform: translateY(0) !important;
+    transform: translateY(0) !important; /* Reveal description */
 }
 
 .card[for="c1"] {
     background-image: url('../image/snake.jpg');
 }
+
 .card[for="c2"] {
     background-image: url('../image/tiger.jpg');
 }
+
 .card[for="c3"] {
     background-image: url('../image/flower.jpg');
 }
+
 .card[for="c4"] {
     background-image: url('../image/bridge.jpeg');
 }
 
-/* Add styles for info containers */
 .info-container {
     position: absolute;
-    padding: 2vh; /* Adjusted padding for better spacing */
-    border-radius: 1vh; /* Adjusted border radius */
-    background-color: #223; /* Match the background color of the cards */
+    padding: 2vh; /* Padding for spacing */
+    border-radius: 1vh; /* Rounded corners */
+    background-color: #223; /* Match card background */
     color: white;
-    box-shadow: 0px 1vh 3vh -0.5vh rgba(0,0,0,0.8);
-    display: flex; /* Hide initially */
+    box-shadow: 0px 1vh 3vh -0.5vh rgba(0, 0, 0, 0.8);
+    display: flex; /* Flex container */
 }
 
 .info-container.large {
-    width: 50vw; /* Adjust width as needed */
-    height: 8.5vh; /* Adjust height as needed */
+    width: 50vw; /* Set width */
+    height: 8.5vh; /* Set height */
 }
 
 .info-container.small {
     width: 30vw;
-    height: 10vh; /* Adjusted height */
+    height: 10vh; /* Set height */
 }
 
-/* Positioning info containers */
 .info-container#info-c1 {
-    top: 7.5vh; /* Moved 2vh up */
+    top: 7.5vh;
     left: 0.5vw;
 }
+
 .info-container#info-c2 {
-    bottom: 2vh; /* Moved 2vh up */
+    bottom: 2vh;
     right: 0.5vw;
 }
+
 .info-container#info-c3 {
-    top: 14vh; /* Moved 2vh up */
+    top: 14vh;
     right: 0.5vw;
 }
+
 .info-container#info-c4 {
-    bottom: 7vh; /* Moved 2vh up */
+    bottom: 7vh;
     left: 0.5vw;
 }
+
 .info-container#info-left {
-    top: 53%; /* Moved 2vh up */
+    top: 53%;
     left: 0.5vw;
     transform: translateY(-50%);
     height: 40vh;
     width: 17vw;
 }
+
 .info-container#info-right {
-    top: 53%; /* Moved 2vh up */
+    top: 53%;
     right: 0.5vw;
     transform: translateY(-50%);
     height: 40vh;
@@ -165,19 +170,19 @@ input:checked + label .description {
 }
 
 /* Show info content when respective card is checked */
-#c1:checked ~ #info-c1,
-#c1:checked ~ #info-left,
-#c1:checked ~ #info-right,
-#c2:checked ~ #info-c2,
-#c2:checked ~ #info-left,
-#c2:checked ~ #info-right,
-#c3:checked ~ #info-c3,
-#c3:checked ~ #info-left,
-#c3:checked ~ #info-right,
-#c4:checked ~ #info-c4,
-#c4:checked ~ #info-left,
-#c4:checked ~ #info-right {
-    display: block;
+#c1:checked~#info-c1,
+#c1:checked~#info-left,
+#c1:checked~#info-right,
+#c2:checked~#info-c2,
+#c2:checked~#info-left,
+#c2:checked~#info-right,
+#c3:checked~#info-c3,
+#c3:checked~#info-left,
+#c3:checked~#info-right,
+#c4:checked~#info-c4,
+#c4:checked~#info-left,
+#c4:checked~#info-right {
+    display: block; /* Display info */
 }
 
 span.headerh1 {

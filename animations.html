@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,16 +12,25 @@
     <link rel="icon" href="image/logo.jpg" type="image/jpg">
     <title>Work</title>
 </head>
+
 <body>
+    <!-- Custom navbar component -->
     <nav-bar></nav-bar>
 
+    <!-- Custom cursor -->
     <div class="cursor"></div>
+
+    <!-- Main content wrapper -->
     <div class="wrapper">
         <div class="container">
+            <!-- Radio button for the first card, checked by default -->
             <input type="radio" name="slide" id="c1" checked>
+            <!-- Label linked to the first radio button, styled as a card -->
             <label for="c1" class="card">
                 <span class="row">
+                    <!-- Icon for the card -->
                     <span class="icon">1</span>
+                    <!-- Description within the card -->
                     <span class="description">
                         <span class="headerh4">Winter</span>
                         <span class="p">Winter has so much to offer - creative activities</span>
@@ -28,7 +38,9 @@
                 </span>
             </label>
 
+            <!-- Radio button for the second card -->
             <input type="radio" name="slide" id="c2">
+            <!-- Label linked to the second radio button, styled as a card -->
             <label for="c2" class="card">
                 <span class="row">
                     <span class="icon">2</span>
@@ -39,7 +51,9 @@
                 </span>
             </label>
 
+            <!-- Radio button for the third card -->
             <input type="radio" name="slide" id="c3">
+            <!-- Label linked to the third radio button, styled as a card -->
             <label for="c3" class="card">
                 <span class="row">
                     <span class="icon">3</span>
@@ -50,7 +64,9 @@
                 </span>
             </label>
 
+            <!-- Radio button for the fourth card -->
             <input type="radio" name="slide" id="c4">
+            <!-- Label linked to the fourth radio button, styled as a card -->
             <label for="c4" class="card">
                 <span class="row">
                     <span class="icon">4</span>
@@ -63,6 +79,7 @@
         </div>
     </div>
 
+    <!-- Info containers for additional content -->
     <div id="info-c1" class="info-container large">
         <span class="headerh1"></span>
     </div>
@@ -82,8 +99,10 @@
         <span class="headerh1"></span>
     </div>
 
-    <script src="scripts/main.js"></script> 
+    <!-- JavaScript files -->
+    <script src="scripts/main.js"></script>
     <script src="scripts/cursor.js"></script>
     <script src="scripts/text_typewriter_effect.js"></script>
 </body>
+
 </html>

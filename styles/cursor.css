@@ -1,69 +1,101 @@
 body {
-    margin:0;
-    height:100vh;
-    background: rgb(27,27,27);
+    margin: 0;
+    height: 100vh;
+    /* Full viewport height */
+    background: rgb(27, 27, 27);
+    /* Dark background color */
     cursor: none;
+    /* Hide default cursor */
 }
 
-.cursor{
+.cursor {
     width: 20px;
-    height:20px;
-    border:1px solid white;
+    height: 20px;
+    border: 1px solid white;
+    /* White border */
     border-radius: 50%;
+    /* Circular shape */
     position: absolute;
+    /* Absolute positioning */
     transition-duration: 200ms;
+    /* Smooth transition duration */
     transition-timing-function: ease-out;
+    /* Easing function for transitions */
     animation: cursorAnim .5s infinite alternate;
+    /* Continuous animation */
     pointer-events: none;
-    z-index: 2;
+    /* Prevent cursor from capturing pointer events */
+    z-index: 100;
+    /* Ensure cursor is above other elements */
 }
 
 .cursor::after {
     content: "";
+    /* Empty content for pseudo-element */
     width: 20px;
     height: 20px;
     position: absolute;
+    /* Absolute positioning */
     border: 8px solid gray;
+    /* Gray border */
     border-radius: 50%;
+    /* Circular shape */
     opacity: .5;
+    /* Semi-transparent */
     top: -8px;
+    /* Position above the cursor */
     left: -8px;
+    /* Position to the left of the cursor */
     animation: cursorAnim2 .5s infinite alternate;
+    /* Continuous animation */
 }
 
 @keyframes cursorAnim {
     from {
         transform: scale(1);
+        /* Start at normal size */
     }
+
     to {
         transform: scale(.7);
+        /* Shrink to 70% size */
     }
 }
 
 @keyframes cursorAnim2 {
     from {
         transform: scale(1);
+        /* Start at normal size */
     }
+
     to {
         transform: scale(.4);
+        /* Shrink to 40% size */
     }
 }
 
 @keyframes cursorAnim3 {
     0% {
         transform: scale(1);
+        /* Start at normal size */
     }
+
     50% {
         transform: scale(3);
+        /* Expand to 300% size */
     }
+
     100% {
         transform: scale(1);
+        /* Return to normal size */
         opacity: 0;
+        /* Fade out */
     }
 }
 
 .expand {
     animation: cursorAnim3 .5s forwards;
+    /* Play animation once forwards */
     border: 1px solid red;
+    /* Change border to red */
 }
-
